@@ -1,0 +1,23 @@
+/* Modo Oscuro - Toggle con clase .dark-mode */
+body.dark-mode {
+    --light-bg: #121212;
+    --text-dark: #f0f0f0;
+    --card-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+
+body.dark-mode .header {
+    background-color: rgba(18, 18, 18, 0.95);
+}
+
+body.dark-mode .destino-card,
+body.dark-mode .testimonial-content {
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+}
+
+body.dark-mode .mega-menu-content {
+    background-color: #1e1e2f;
+    color: white;
+}

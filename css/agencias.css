@@ -1,0 +1,316 @@
+/* ========== PÁGINA DE AGENCIAS ========== */
+
+/* Hero de agencias */
+.agencias-hero {
+    background: linear-gradient(135deg, var(--secondary-color), #1a3a4a);
+    padding: 80px 0 60px;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+.agencias-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.agencias-hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ========== FILTROS ========== */
+.filtros-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.filtros-buttons input[type="radio"] {
+    display: none;
+}
+
+.filtro-btn {
+    padding: 10px 24px;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.filtro-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Estilo activo para el botón seleccionado */
+.filtros-buttons input[type="radio"]:checked + .filtro-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Ajuste para el label cuando el input está checked */
+#todas:checked ~ .filtros-buttons label[for="todas"],
+#aventura:checked ~ .filtros-buttons label[for="aventura"],
+#cultural:checked ~ .filtros-buttons label[for="cultural"],
+#luxury:checked ~ .filtros-buttons label[for="luxury"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Grid de agencias */
+.agencias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+/* ========== EFECTO FLIP 3D ========== */
+.agencia-flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.agencia-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.agencia-card:hover .agencia-flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front y Back */
+.agencia-front,
+.agencia-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.agencia-front {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.agencia-front .agencia-logo {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.agencia-front .agencia-logo i {
+    font-size: 2rem;
+    color: white;
+}
+
+.agencia-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.agencia-front h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.rating-static {
+    margin: 0.5rem 0;
+}
+
+.rating-static i {
+    color: #f39c12;
+    font-size: 0.9rem;
+}
+
+.rating-static span {
+    font-size: 0.8rem;
+    color: #666;
+    margin-left: 5px;
+}
+
+.agencia-tag {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Back de la tarjeta */
+.agencia-back {
+    background: linear-gradient(135deg, var(--secondary-color), #1e3a4a);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.agencia-back h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.agencia-back p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.agencia-contacto {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.agencia-contacto p {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.agencia-contacto i {
+    width: 25px;
+    color: var(--accent-color);
+}
+
+.small-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.small-button:hover {
+    background-color: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* ========== RATING CON ESTRELLAS ANIMADAS ========== */
+.rating-interactivo {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 50px;
+}
+
+.rating-interactivo p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5px;
+}
+
+.rating-stars input {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 1.8rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+    color: #f39c12;
+    transform: scale(1.1);
+    text-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+}
+
+@keyframes starPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.rating-stars input:checked ~ label {
+    animation: starPop 0.3s ease;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .agencias-hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .agencia-flip-card {
+        height: 420px;
+    }
+    
+    .filtro-btn {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .rating-stars label {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========== MODO OSCURO ========== */
+body.dark-mode .agencia-front {
+    background-color: #16213e;
+}
+
+body.dark-mode .agencia-front h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .rating-interactivo {
+    background-color: #1a1a2e;
+}
+
+body.dark-mode .rating-interactivo p {
+    color: #ccc;
+}
+
+body.dark-mode .filtro-btn {
+    background-color: #2a2a3e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .filtro-btn:hover {
+    background-color: var(--primary-color);
+}

@@ -1,212 +1,398 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Turismo Jujuy">
+    <meta name="language" content="spanish">
+    <meta http-equiv="content-language" content="es-AR">
+    <meta name="description" content="Blog de viajes por Jujuy. Descubrí historias, consejos y experiencias únicas en la Quebrada, Puna y Yungas.">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Fitness - Tribu de Hierro Gym</title>
-    <link rel="icon" href="/assets/image/favicon.ico">
+    <meta property="og:title" content="Blog de Viajes - Turismo Jujuy">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Historias y consejos para tu viaje a Jujuy.">
+    <meta property="og:locale" content="es_AR">
+    <title>Turismo Jujuy · Blog de Viajes y Destinos</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header class="header">
+
+    <!-- ================= HEADER (IGUAL AL INDEX) ================= -->
+    <header class="header" role="banner">
         <div class="container">
-            <div class="header-content">
-                <h1>Tribu de Hierro <span>Blog de Fitness</span></h1>
-                <button id="theme-toggle" class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-            
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
-                    <li><a href="#entrenamiento" class="nav-link"><i class="fas fa-dumbbell"></i> Entrenamiento</a></li>
-                    <li><a href="#nutricion" class="nav-link"><i class="fas fa-utensils"></i> Nutrición</a></li>
-                    <li><a href="#motivacion" class="nav-link"><i class="fas fa-fire"></i> Motivación</a></li>
-                    <li><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
-                </ul>
-                
-                <div class="search-container">
-                    <input type="text" placeholder="Buscar artículos..." class="search-input">
-                    <button class="search-button"><i class="fas fa-search"></i></button>
+            <nav class="navbar" aria-label="Navegación principal">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg class="logo-svg" width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Turismo Jujuy">
+                            <path d="M20,50 L50,20 L80,50 L50,80 Z" fill="var(--primary-color)" stroke="var(--accent-color)" stroke-width="2">
+                                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="20s" repeatCount="indefinite"/>
+                            </path>
+                            <circle cx="50" cy="50" r="15" fill="var(--light-bg)"/>
+                        </svg>
+                        <h1>Turismo Jujuy</h1>
+                    </a>
                 </div>
                 
-                <button class="mobile-menu-button">
-                    <i class="fas fa-bars"></i>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú principal">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-links" id="main-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    
+                    <li class="mega-menu">
+                        <button class="mega-menu-button" aria-expanded="false" aria-controls="destinos-menu">
+                            Destinos <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="mega-menu-content" id="destinos-menu">
+                            <div class="mega-menu-row">
+                                <div class="mega-menu-column">
+                                    <h3>Quebrada</h3>
+                                    <ul>
+                                        <li><a href="destinos/purmamarca.html">Purmamarca</a></li>
+                                        <li><a href="destinos/tilcara.html">Tilcara</a></li>
+                                        <li><a href="destinos/humahuaca.html">Humahuaca</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h3>Puna</h3>
+                                    <ul>
+                                        <li><a href="destinos/salinas.html">Salinas Grandes</a></li>
+                                        <li><a href="destinos/susques.html">Susques</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h3>Yungas</h3>
+                                    <ul>
+                                        <li><a href="destinos/calilegua.html">P.N. Calilegua</a></li>
+                                        <li><a href="destinos/termas.html">Termas de Jordán</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li><a href="agencias.html">Agencias</a></li>
+                    <li><a href="precios.html">Precios</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                
+                <button id="darkModeToggle" class="dark-mode-btn" aria-label="Cambiar modo oscuro/claro">
+                    <i class="fas fa-moon"></i>
                 </button>
             </nav>
         </div>
     </header>
 
-    <main class="main-content">
-        <section class="featured-section">
+    <main id="main-content">
+        <!-- ================= HERO DEL BLOG ================= -->
+        <section class="blog-hero" aria-labelledby="blog-heading">
             <div class="container">
-                <h2 class="section-title">Artículo Destacado</h2>
-                <article class="featured-post" data-category="entrenamiento">
-                    <div class="featured-image">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Entrenamiento de fuerza">
-                        <div class="category-badge">Entrenamiento</div>
-                    </div>
-                    <div class="featured-content">
-                        <h2 class="post-title">Rutinas para ganar masa muscular</h2>
-                        <p class="post-excerpt">Descubre las mejores rutinas para desarrollar músculo de forma eficiente con métodos basados en ciencia y experiencia de nuestros entrenadores.</p>
-                        <div class="post-meta">
-                            <span class="author"><i class="fas fa-user"></i> Coach Carlos</span>
-                            <span class="date"><i class="fas fa-calendar-alt"></i> 15 Mayo 2023</span>
-                            <span class="reading-time"><i class="fas fa-clock"></i> 5 min lectura</span>
-                        </div>
-                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
+                <div class="blog-hero-content">
+                    <h1 id="blog-heading" class="animate-fade-in">Blog de Viajes</h1>
+                    <p class="animate-slide-up">Historias, consejos y experiencias para descubrir Jujuy</p>
+                </div>
             </div>
         </section>
 
-        <section class="blog-section">
+        <!-- ================= FILTROS POR TAGS (CSS-ONLY) ================= -->
+        <section class="filtros-blog section-padding">
+            <div class="container">
+                <div class="filtros-container">
+                    <div class="section-header">
+                        <h2>Últimos artículos</h2>
+                        <p>Filtrá por categoría</p>
+                    </div>
+                    
+                    <div class="tags-filtros">
+                        <input type="radio" name="tag-filtro" id="tag-todos" checked>
+                        <label for="tag-todos" class="tag-btn">Todos</label>
+                        
+                        <input type="radio" name="tag-filtro" id="tag-aventura">
+                        <label for="tag-aventura" class="tag-btn">🏔️ Aventura</label>
+                        
+                        <input type="radio" name="tag-filtro" id="tag-cultura">
+                        <label for="tag-cultura" class="tag-btn">🏺 Cultura</label>
+                        
+                        <input type="radio" name="tag-filtro" id="tag-gastronomia">
+                        <label for="tag-gastronomia" class="tag-btn">🍷 Gastronomía</label>
+                        
+                        <input type="radio" name="tag-filtro" id="tag-naturaleza">
+                        <label for="tag-naturaleza" class="tag-btn">🌿 Naturaleza</label>
+                        
+                        <input type="radio" name="tag-filtro" id="tag-consejos">
+                        <label for="tag-consejos" class="tag-btn">💡 Consejos</label>
+                    </div>
+                </div>
+
+                <!-- ================= GRID DE ARTÍCULOS (NEWSPAPER STYLE) ================= -->
+                <div class="blog-grid">
+                    <!-- Artículo 1 - Aventura (destacado - ocupa 2 columnas) -->
+                    <article class="blog-card featured" data-tag="aventura">
+                        <div class="blog-card-img">
+                            <img src="assets/images/trekking 7.webp" alt="Trekking en el Cerro de los 7 Colores" loading="lazy">
+                            <span class="blog-category">Aventura</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>El mejor trekking del Cerro de los 7 Colores</h3>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> 15 Mar 2026</span>
+                                <span><i class="fas fa-user"></i> Por Ana Martínez</span>
+                                <span><i class="fas fa-comment"></i> 12 comentarios</span>
+                            </div>
+                            <p>Descubrí las mejores rutas para recorrer el famoso cerro de Purmamarca, con consejos de altura y equipamiento necesario...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 2 - Cultura -->
+                    <article class="blog-card" data-tag="cultura">
+                        <div class="blog-card-img">
+                            <img src="assets/images/pucara.webp" alt="Pucará de Tilcara" loading="lazy">
+                            <span class="blog-category">Cultura</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Pucará de Tilcara: historia viva</h3>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> 10 Mar 2026</span>
+                                <span><i class="fas fa-user"></i> Por Carlos López</span>
+                                <span><i class="fas fa-comment"></i> 8 comentarios</span>
+                            </div>
+                            <p>La fortaleza de los tilcaras, un viaje al pasado prehispánico en la Quebrada de Humahuaca...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 3 - Gastronomía -->
+                    <article class="blog-card" data-tag="gastronomia">
+                        <div class="blog-card-img">
+                            <img src="assets/media/img5.webp" alt="Comida típica jujeña" loading="lazy">
+                            <span class="blog-category">Gastronomía</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Qué comer en Jujuy: platos imperdibles</h3>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> 5 Mar 2026</span>
+                                <span><i class="fas fa-user"></i> Por Laura Fernández</span>
+                                <span><i class="fas fa-comment"></i> 15 comentarios</span>
+                            </div>
+                            <p>Desde la humita hasta el locro, te contamos los sabores que no te podés perder en tu visita...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 4 - Naturaleza -->
+                    <article class="blog-card" data-tag="naturaleza">
+                        <div class="blog-card-img">
+                            <img src="assets/images/Salinas-Grandes-jujuy.webp" alt="Salinas Grandes" loading="lazy">
+                            <span class="blog-category">Naturaleza</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Salinas Grandes: el desierto blanco</h3>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> 28 Feb 2026</span>
+                                <span><i class="fas fa-user"></i> Por Martín Soria</span>
+                                <span><i class="fas fa-comment"></i> 10 comentarios</span>
+                            </div>
+                            <p>Consejos para visitar las Salinas, el mejor horario para las fotos y cómo llegar desde Purmamarca...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 5 - Consejos -->
+                    <article class="blog-card" data-tag="consejos">
+                        <div class="blog-card-img">
+                            <img src="assets/images/concejos.webp" alt="Consejos para la altura" loading="lazy">
+                            <span class="blog-category">Consejos</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Cómo evitar el mal de altura en Jujuy</h3>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> 20 Feb 2026</span>
+                                <span><i class="fas fa-user"></i> Por Dra. Silvia Rojas</span>
+                                <span><i class="fas fa-comment"></i> 22 comentarios</span>
+                            </div>
+                            <p>Todo lo que necesitás saber para disfrutar de la altura sin riesgos: hidratación, aclimatación y más...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 6 - Aventura -->
+                    <article class="blog-card" data-tag="aventura">
+                        <div class="blog-card-img">
+                            <img src="assets/images/hornocal2.webp" alt="Cerro Hornocal" loading="lazy">
+                            <span class="blog-category">Aventura</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Hornocal: el cerro de 14 colores</h3>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> 15 Feb 2026</span>
+                                <span><i class="fas fa-user"></i> Por Juan Pérez</span>
+                                <span><i class="fas fa-comment"></i> 18 comentarios</span>
+                            </div>
+                            <p>Cómo llegar al mirador del Hornocal, el mejor horario para ver los colores y qué llevar...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 7 - Cultura -->
+                    <article class="blog-card" data-tag="cultura">
+                        <div class="blog-card-img">
+                            <img src="assets/images/carnaval-jujuy.webp" alt="Carnaval de Jujuy" loading="lazy">
+                            <span class="blog-category">Cultura</span>
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Carnaval Jujeño: tradición y color</h3>
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> 10 Feb 2026</span>
+                                <span><i class="fas fa-user"></i> Por María González</span>
+                                <span><i class="fas fa-comment"></i> 14 comentarios</span>
+                            </div>
+                            <p>Viví el carnaval más auténtico del norte argentino, con coplas, desentierro del diablo y mucha fiesta...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN DE COMENTARIOS (CON AVATARES CSS) ================= -->
+        <section class="comentarios-destacados section-padding">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Últimos Artículos</h2>
-                    <div class="category-filters">
-                        <button class="filter-button active" data-filter="all">Todos</button>
-                        <button class="filter-button" data-filter="entrenamiento">Entrenamiento</button>
-                        <button class="filter-button" data-filter="nutricion">Nutrición</button>
-                        <button class="filter-button" data-filter="motivacion">Motivación</button>
+                    <h2>Comentarios de viajeros</h2>
+                    <p>Lo que opinan nuestros lectores</p>
+                </div>
+                
+                <div class="comentarios-grid">
+                    <!-- Comentario 1 -->
+                    <div class="comentario-card">
+                        <div class="comentario-avatar avatar-1"></div>
+                        <div class="comentario-content">
+                            <div class="comentario-header">
+                                <h4>Elena M.</h4>
+                                <span class="comentario-fecha"><i class="fas fa-clock"></i> Hace 3 días</span>
+                            </div>
+                            <p>"Excelente artículo sobre el Hornocal. Seguí sus consejos y llegué temprano, los colores eran impresionantes. Muy recomendado!"</p>
+                            <div class="comentario-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Comentario 2 -->
+                    <div class="comentario-card">
+                        <div class="comentario-avatar avatar-2"></div>
+                        <div class="comentario-content">
+                            <div class="comentario-header">
+                                <h4>Carlos R.</h4>
+                                <span class="comentario-fecha"><i class="fas fa-clock"></i> Hace 1 semana</span>
+                            </div>
+                            <p>"La guía de comidas típicas me salvó las vacaciones. Probé la humita en Purmamarca y el locro en Tilcara, una delicia. Gracias por los tips!"</p>
+                            <div class="comentario-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Comentario 3 -->
+                    <div class="comentario-card">
+                        <div class="comentario-avatar avatar-3"></div>
+                        <div class="comentario-content">
+                            <div class="comentario-header">
+                                <h4>Lucía F.</h4>
+                                <span class="comentario-fecha"><i class="fas fa-clock"></i> Hace 2 semanas</span>
+                            </div>
+                            <p>"Muy útiles los consejos para el mal de altura. Seguí todas las recomendaciones y pude disfrutar de las Salinas sin problemas. Volveré a leerlos!"</p>
+                            <div class="comentario-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="articles-grid">
-                    <article class="post-card" data-category="nutricion">
-                        <div class="post-image">
-                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Alimentos saludables">
-                            <div class="category-badge">Nutrición</div>
+                <!-- Formulario para dejar comentario -->
+                <div class="form-comentario">
+                    <h3>Dejá tu comentario</h3>
+                    <form id="comentarioForm">
+                        <div class="form-row">
+                            <input type="text" placeholder="Tu nombre" required>
+                            <input type="email" placeholder="Tu email" required>
                         </div>
-                        <div class="post-content">
-                            <h3 class="post-title">Los mejores alimentos para después del entrenamiento</h3>
-                            <p class="post-excerpt">Aprende qué comer después del gym para mejorar tu recuperación y maximizar tus ganancias musculares.</p>
-                            <div class="post-meta">
-                                <span class="author"><i class="fas fa-user"></i> Nutrióloga Ana</span>
-                                <span class="date"><i class="fas fa-calendar-alt"></i> 10 Mayo 2023</span>
+                        <textarea rows="4" placeholder="Escribí tu comentario..." required></textarea>
+                        <div class="form-rating">
+                            <span>Tu calificación:</span>
+                            <div class="rating-stars-comentario">
+                                <input type="radio" name="rating-comentario" id="c-star5"><label for="c-star5">★</label>
+                                <input type="radio" name="rating-comentario" id="c-star4"><label for="c-star4">★</label>
+                                <input type="radio" name="rating-comentario" id="c-star3"><label for="c-star3">★</label>
+                                <input type="radio" name="rating-comentario" id="c-star2"><label for="c-star2">★</label>
+                                <input type="radio" name="rating-comentario" id="c-star1"><label for="c-star1">★</label>
                             </div>
-                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </article>
-
-                    <article class="post-card" data-category="motivacion">
-                        <div class="post-image">
-                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mujer entrenando">
-                            <div class="category-badge">Motivación</div>
-                        </div>
-                        <div class="post-content">
-                            <h3 class="post-title">Cómo mantener la disciplina en el gimnasio</h3>
-                            <p class="post-excerpt">Estrategias comprobadas para crear hábitos duraderos y no abandonar tus metas fitness.</p>
-                            <div class="post-meta">
-                                <span class="author"><i class="fas fa-user"></i> Psicóloga Laura</span>
-                                <span class="date"><i class="fas fa-calendar-alt"></i> 5 Mayo 2023</span>
-                            </div>
-                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="post-card" data-category="entrenamiento">
-                        <div class="post-image">
-                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Entrenamiento funcional">
-                            <div class="category-badge">Entrenamiento</div>
-                        </div>
-                        <div class="post-content">
-                            <h3 class="post-title">Entrenamiento funcional: Beneficios y ejercicios</h3>
-                            <p class="post-excerpt">Descubre cómo el entrenamiento funcional puede mejorar tu rendimiento en actividades cotidianas y deportivas.</p>
-                            <div class="post-meta">
-                                <span class="author"><i class="fas fa-user"></i> Coach Roberto</span>
-                                <span class="date"><i class="fas fa-calendar-alt"></i> 1 Mayo 2023</span>
-                            </div>
-                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="post-card" data-category="nutricion">
-                        <div class="post-image">
-                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Suplementos deportivos">
-                            <div class="category-badge">Nutrición</div>
-                        </div>
-                        <div class="post-content">
-                            <h3 class="post-title">Guía de suplementos para principiantes</h3>
-                            <p class="post-excerpt">Qué suplementos valen la pena y cuáles puedes evitar cuando estás comenzando en el fitness.</p>
-                            <div class="post-meta">
-                                <span class="author"><i class="fas fa-user"></i> Nutrióloga Ana</span>
-                                <span class="date"><i class="fas fa-calendar-alt"></i> 25 Abril 2023</span>
-                            </div>
-                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="pagination">
-                    <button class="pagination-button active">1</button>
-                    <button class="pagination-button">2</button>
-                    <button class="pagination-button">3</button>
-                    <button class="pagination-button next">Siguiente <i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </section>
-
-        <section class="newsletter-section">
-            <div class="container">
-                <div class="newsletter-content">
-                    <h2>Suscríbete a nuestro Newsletter</h2>
-                    <p>Recibe artículos exclusivos, tips de entrenamiento y promociones especiales directamente en tu correo.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Tu correo electrónico" required>
-                        <button type="submit">Suscribirme <i class="fas fa-paper-plane"></i></button>
+                        <button type="submit" class="button primary-button">Enviar comentario</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- ================= FOOTER (IGUAL AL INDEX) ================= -->
+    <footer class="main-footer section-padding" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>Tribu de Hierro Gym</h3>
-                    <p>Transformando cuerpos y mentes desde 2010. Nuestro objetivo es ayudarte a alcanzar tu mejor versión.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
+            <div class="footer-grid">
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recibí ofertas y guías exclusivas</p>
+                    <form id="newsletterForm" action="#" method="post">
+                        <div class="form-group">
+                            <input type="email" id="news-email" name="email" placeholder="Tu correo electrónico" required>
+                            <button type="submit" class="button primary-button">Suscribirme</button>
+                        </div>
+                    </form>
                 </div>
-                
-                <div class="footer-links">
-                    <h4>Enlaces rápidos</h4>
+                <div class="footer-social">
+                    <h3>Seguinos</h3>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="clases.html">Clases</a></li>
-                        <li><a href="entrenadores.html">Entrenadores</a></li>
-                        <li><a href="precios.html">Precios</a></li>
-                        <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-contact">
-                    <h4>Contacto</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Hierro 123, Ciudad</p>
-                    <p><i class="fas fa-phone"></i> (55) 1234-5678</p>
-                    <p><i class="fas fa-envelope"></i> contacto@tribudehierro.com</p>
-                    <p><i class="fas fa-clock"></i> Lunes-Viernes: 5:00 - 23:00</p>
+                <div class="footer-map">
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-66.5%2C-24.5%2C-64.5%2C-22.5&layer=mapnik&marker=-23.5%2C-65.5" 
+                            width="100%" height="200" style="border:0" allowfullscreen loading="lazy" 
+                            title="Mapa de Jujuy"></iframe>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2023 Tribu de Hierro Gym. Todos los derechos reservados.</p>
-                <div class="legal-links">
-                    <a href="#">Términos y condiciones</a>
-                    <a href="#">Política de privacidad</a>
-                </div>
+                <p>&copy; 2026 Turismo Jujuy - Descubrí la magia del norte argentino</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/blog.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/blog.js" defer></script>
 </body>
 </html>

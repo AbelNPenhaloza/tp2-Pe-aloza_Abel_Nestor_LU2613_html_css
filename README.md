@@ -1,75 +1,118 @@
-# pysw-2025-tps
-Trabajos prácticos de la cursada 2025
-# Requisitos Generales
+# 🏔️ Turismo Jujuy - Mi Primer Sitio Web Turístico
 
-## Editor de Código
+> Proyecto para la materia Programación Web
 
-Se recomienda utilizar **Visual Studio Code** con los complementos:
+## 📌 ¿De qué trata este proyecto?
 
-- **HTML CSS Support**: para mejorar la autocompleción y sugerencias.
-- **Live Server**: para visualizar el sitio en un servidor local de manera instantánea.
+Este es un sitio web que hice para promocionar el turismo en la provincia de **Jujuy**. Muestra los destinos más lindos, agencias de viaje, precios, un blog con consejos y un formulario de contacto.
 
-## Estructura del Proyecto
-
-- Utilizar **HTML5** para la estructura del contenido con etiquetas semánticas (`header`, `nav`, `footer`, `section`, `aside`, `article`).
-- Aplicar estilos desde un archivo **CSS externo** para mantener una organización limpia.
-- Utilizar el **modelo de cajas de CSS (box model)** para definir la disposición de los elementos.
+**Puedes verlo funcionando acá:** [https://turismojujuy.netlify.app](https://turismojujuy.netlify.app)
 
 ---
 
-# Estructura del Sitio Web: Gimnasio
+## 🛠️ ¿Qué herramientas usé?
 
-## 1. Página Principal (Home)
-
-- **Encabezado (Header)** con un **mega-menú desplegable**, con opciones como:
-  - Clases
-  - Entrenadores
-  - Precios
-- **Sección Hero** con:
-  - Video de fondo (por ejemplo, de un entrenamiento motivacional)
-  - Overlay de texto animado
-- **Clases destacadas**: tarjetas (cards) con efectos hover y transiciones CSS.
-- **Contador animado** con `@keyframes` (Ejemplo: "500+ socios satisfechos").
-- **Testimonios** en un carrusel solo con CSS.
-- **Pie de página (Footer)** con:
-  - Formulario para suscripción al newsletter
-  - Enlaces a redes sociales
-  - Mapa interactivo embebido (Google Maps o OpenStreetMap)
-
-## 2. Página de Clases (Grid Avanzado + Filtros)
-
-- Sistema de **filtrado por categoría** (Musculación, CrossFit, Yoga, Spinning) utilizando solo CSS (`:checked` y combinadores).
-- **Galería tipo "masonry"** con CSS Grid, con imágenes de diferentes alturas. Tarjetas con información y efectos de zoom/overlay al pasar el cursor.
-- **Tabla responsiva de horarios semanales**, adaptada para móviles y escritorio.
-
-## 3. Página de Entrenadores (Perfiles Interactivos)
-
-- Tarjetas con **efecto flip** (rotación al hacer hover para ver detalles).
-- **Barra de habilidades animada** (Ejemplo: Fuerza 90%, Flexibilidad 80%).
-- Sistema de **rating con estrellas animadas** (solo CSS).
-
-## 4. Formulario de Contacto Avanzado
-
-- **Validación en tiempo real** usando `:valid` y `:invalid`.
-- **Spinner de carga** en CSS al enviar.
-- Diseño **responsivo** con Flexbox y Grid.
-- **Modal de confirmación** tras envío exitoso.
-
-## 5. Página de Precios (Comparador de Planes)
-
-- Tabla de precios con **efecto de resaltado** al hacer hover.
-- **Toggle mensual/anual**, cambiando los precios solo con CSS.
-- **Tooltips explicativos** (Ejemplo: "Incluye acceso ilimitado").
-
-## 6. Blog de Fitness (Estilo Revista)
-
-- Diseño tipo **"newspaper"** usando CSS Grid.
-- Sistema de **tags y categorías** con filtrado solo CSS.
-- Sección de **comentarios estilizada**, con avatares creados con CSS y pseudoelementos.
-- **Efecto Scroll Reveal**, donde los artículos aparecen al hacer scroll.
+| Herramienta | ¿Para qué? |
+|-------------|-------------|
+| **Visual Studio Code** | Editor de código |
+| **Live Server** | Para ver los cambios en tiempo real |
+| **HTML5** | Para la estructura de las páginas |
+| **CSS3** | Para los colores, diseños y animaciones |
+| **JavaScript** | Para el contador, el modo oscuro y los filtros |
 
 ---
 
+## 📁 ¿Cómo organicé los archivos?
+
+turismo-jujuy/
+├── index.html # Página principal
+├── agencias.html # Agencias de viaje
+├── precios.html # Tabla de precios
+├── blog.html # Blog de viajes
+├── contacto.html # Formulario de contacto
+├── css/
+│ ├── styles.css # Estilos de todo el sitio
+│ ├── dark-mode.css # Modo oscuro
+│ └── ... # Más estilos por página
+├── js/
+│ ├── main.js # Cosas comunes (modo oscuro, menú)
+│ └── ... # Más funciones por página
+└── assets/
+├── images/ # Fotos de destinos
+├── media/ # Fotos del blog
+└── videos/ # Video de fondo
+
+---
+
+## 🧩 ¿Qué tiene cada página?
+
+### 1. Página Principal (`index.html`)
+
+| Elemento | ¿Cómo lo hice? |
+|----------|----------------|
+| **Header con mega-menú** | Un menú que al pasar el mouse sobre "Destinos" muestra más opciones (Quebrada, Puna, Yungas) |
+| **Hero con video** | Un video de fondo con un texto que aparece con animación |
+| **Destinos destacados** | 3 tarjetas que se agrandan cuando pasas el mouse |
+| **Contador animado** | Números que suben solos cuando llegas a esa sección |
+| **Carrusel de testimonios** | Opiniones de viajeros que cambian con puntitos (solo CSS) |
+| **Footer** | Formulario para newsletter, redes sociales y un mapa |
+
+### 2. Agencias (`agencias.html`)
+
+| Elemento | ¿Cómo lo hice? |
+|----------|----------------|
+| **Efecto flip** | Las tarjetas dan vuelta como si fueran un cubo y muestran teléfono y email |
+| **Rating con estrellas** | Estrellitas que puedes clickear para calificar |
+| **Filtros** | Botones para ver solo agencias de Aventura, Cultural o Lujo |
+
+### 3. Precios (`precios.html`)
+
+| Elemento | ¿Cómo lo hice? |
+|----------|----------------|
+| **Tabla responsiva** | En celular la tabla se ve como tarjetas |
+| **Tooltips** | Pasar el mouse por los íconos ℹ️ y muestra información extra |
+| **Efecto hover** | Las filas se resaltan cuando pasas el mouse |
+
+### 4. Blog (`blog.html`)
+
+| Elemento | ¿Cómo lo hice? |
+|----------|----------------|
+| **Diseño tipo revista** | Los artículos se ordenan en 3 columnas |
+| **Filtros por tags** | Botones para ver solo Aventura, Cultura, Gastronomía, etc. |
+| **Comentarios** | Avatares hechos con CSS (sin imágenes) |
+| **Scroll Reveal** | Los artículos aparecen suavemente cuando haces scroll |
+
+### 5. Contacto (`contacto.html`)
+
+| Elemento | ¿Cómo lo hice? |
+|----------|----------------|
+| **Validación** | Los campos se ponen verdes o rojos mientras escribes |
+| **Spinner** | Un círculo que gira mientras se "envía" el formulario |
+| **Modal** | Una ventanita que dice "¡Gracias!" después de enviar |
+
+---
+
+## ✨ Cosas avanzadas que aprendí a hacer
+
+| Técnica | ¿Qué hace? |
+|---------|-------------|
+| **Variables CSS** | Definí colores una sola vez y los reutilicé en todo el sitio |
+| **Modo oscuro** | Un botón que cambia todos los colores a oscuro |
+| **Micro-interacciones** | Los botones se mueven un poquito cuando pasas el mouse |
+| **Animaciones con keyframes** | El contador, el spinner y las estrellas tienen movimiento |
+| **Accesibilidad** | Usé `aria-label` para que lectores de pantalla entiendan el contenido |
+
+---
+
+## ♿ Accesibilidad (para que todos puedan usarlo)
+
+| Práctica | ¿Qué hice? |
+|----------|-------------|
+| Contraste | Usé colores que se ven bien incluso para personas con dificultades visuales |
+| Focus visible | Cuando navegas con el teclado, se ve un borde alrededor del elemento seleccionado |
+| ARIA labels | Agregué descripciones para los botones del menú y el modo oscuro |
+
+---
 # Técnicas Avanzadas a Implementar
 
 ## CSS Avanzado
@@ -92,6 +135,21 @@ Se recomienda utilizar **Visual Studio Code** con los complementos:
 - Uso de **ARIA labels** para elementos interactivos.
 
 ---
+## Video de presentación
+
+En el video muestro:
+
+Cómo funciona el mega-menú
+
+Las tarjetas con efecto flip
+
+El contador animado
+
+Los filtros de agencias y blog
+
+El modo oscuro
+
+La validación del formulario
 
 # Entregables
 
@@ -107,4 +165,7 @@ Los alumnos deben entregar:
 ## Páginas de referencia
 
 - [https://www.gymtop.com.ar/](https://www.gymtop.com.ar/)
+
+## Autor
+Abel Nestor Peñaloza - Estudiante de PySW 2026
 

@@ -4,61 +4,45 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeModal = document.getElementById('closeModal');
     const submitBtn = contactForm.querySelector('.submit-btn');
 
+    // Función para mostrar errores de validación
+    function showValidationErrors() {
+        const invalidFields = contactForm.querySelectorAll(':invalid');
+        invalidFields.forEach(field => {
+            field.style.borderColor = '#f44336';
+            if (field === invalidFields[0]) {
+                field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    }
+
+    // Función para limpiar estilos de validación
+    function clearValidationStyles() {
+        const allFields = contactForm.querySelectorAll('.form-control');
+        allFields.forEach(field => {
+            field.style.borderColor = '';
+        });
+    }
+
     // Manejar el envío del formulario
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        clearValidationStyles();
         
         // Validar todos los campos requeridos
         if (!contactForm.checkValidity()) {
-            // Mostrar errores si el formulario no es válido
-            const invalidFields = contactForm.querySelectorAll(':invalid');
-            invalidFields.forEach(field => {
-                field.style.borderColor = '#f44336';
-                
-                // Desplazarse al primer campo inválido
-                if (field === invalidFields[0]) {
-                    field.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            });
+            showValidationErrors();
             return;
         }
 
         // Mostrar spinner de carga
         submitBtn.classList.add('loading');
         
-        // Simular envío del formulario (en producción, usar fetch o AJAX)
+        // Simular envío del formulario
         setTimeout(() => {
-            // Ocultar spinner
             submitBtn.classList.remove('loading');
-            
-            // Mostrar modal de confirmación
             confirmationModal.classList.add('active');
-            
-            // Aquí iría el código real para enviar el formulario
-            // Ejemplo con fetch:
-            /*
-            fetch('tu-endpoint.php', {
-                method: 'POST',
-                body: new FormData(contactForm)
-            })
-            .then(response => response.json())
-            .then(data => {
-                submitBtn.classList.remove('loading');
-                if (data.success) {
-                    confirmationModal.classList.add('active');
-                    contactForm.reset();
-                } else {
-                    alert('Error al enviar el formulario');
-                }
-            })
-            .catch(error => {
-                submitBtn.classList.remove('loading');
-                alert('Error de conexión');
-            });
-            */
-            
-            // Limpiar formulario después del envío
             contactForm.reset();
+            clearValidationStyles();
         }, 1500);
     });
 
@@ -74,30 +58,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Validación en tiempo real para campos de formulario
+    // Validación en tiempo real con micro-interacciones
     const inputs = contactForm.querySelectorAll('input, textarea, select');
     inputs.forEach(input => {
         input.addEventListener('input', function() {
-            // Resetear estilo del campo
-            this.style.borderColor = '#ddd';
-            
-            // Validar campo y aplicar estilos
-            if (this.checkValidity()) {
-                if (this.value !== '') {
-                    this.style.borderColor = '#4CAF50';
-                }
+            if (this.checkValidity() && this.value !== '') {
+                this.style.borderColor = '#4CAF50';
+                // Animación de feedback táctil
+                this.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
             } else if (this.value !== '') {
                 this.style.borderColor = '#f44336';
+            } else {
+                this.style.borderColor = '#e0e0e0';
             }
         });
         
-        // Validar al perder el foco
         input.addEventListener('blur', function() {
             if (!this.checkValidity() && this.value !== '') {
                 this.style.borderColor = '#f44336';
+                // Shake animation para error
+                this.style.animation = 'shake 0.3s ease';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 300);
             }
         });
     });
+
+    // Animación shake para errores
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+    `;
+    document.head.appendChild(style);
 
     // Cerrar modal con tecla Escape
     document.addEventListener('keydown', function(e) {

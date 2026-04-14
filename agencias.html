@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Turismo Jujuy">
+    <meta name="language" content="spanish">
+    <meta http-equiv="content-language" content="es-AR">
+    <meta name="description" content="Agencias de viaje oficiales en Jujuy. Encontrá las mejores agencias para recorrer la Quebrada, Puna y Yungas.">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Agencias de Viaje - Turismo Jujuy">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Las mejores agencias de viaje para descubrir Jujuy.">
+    <meta property="og:locale" content="es_AR">
+    <title>Turismo Jujuy · Agencias de Viaje Oficiales</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/agencias.css">
+    
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- ================= HEADER (IGUAL AL INDEX) ================= -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="navbar" aria-label="Navegación principal">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg class="logo-svg" width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Turismo Jujuy">
+                            <path d="M20,50 L50,20 L80,50 L50,80 Z" fill="var(--primary-color)" stroke="var(--accent-color)" stroke-width="2">
+                                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="20s" repeatCount="indefinite"/>
+                            </path>
+                            <circle cx="50" cy="50" r="15" fill="var(--light-bg)"/>
+                        </svg>
+                        <h1>Turismo Jujuy</h1>
+                    </a>
+                </div>
+                
+                <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú principal">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-links" id="main-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    
+                    <li class="mega-menu">
+                        <button class="mega-menu-button" aria-expanded="false" aria-controls="destinos-menu">
+                            Destinos <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="mega-menu-content" id="destinos-menu">
+                            <div class="mega-menu-row">
+                                <div class="mega-menu-column">
+                                    <h3>Quebrada</h3>
+                                    <ul>
+                                        <li><a href="destinos/purmamarca.html">Purmamarca</a></li>
+                                        <li><a href="destinos/tilcara.html">Tilcara</a></li>
+                                        <li><a href="destinos/humahuaca.html">Humahuaca</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h3>Puna</h3>
+                                    <ul>
+                                        <li><a href="destinos/salinas.html">Salinas Grandes</a></li>
+                                        <li><a href="destinos/susques.html">Susques</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h3>Yungas</h3>
+                                    <ul>
+                                        <li><a href="destinos/calilegua.html">P.N. Calilegua</a></li>
+                                        <li><a href="destinos/termas.html">Termas de Jordán</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li><a href="agencias.html" class="active">Agencias</a></li>
+                    <li><a href="precios.html">Precios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                
+                <button id="darkModeToggle" class="dark-mode-btn" aria-label="Cambiar modo oscuro/claro">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ================= HERO DE AGENCIAS ================= -->
+        <section class="agencias-hero" aria-labelledby="agencias-heading">
+            <div class="container">
+                <div class="agencias-hero-content">
+                    <h1 id="agencias-heading" class="animate-fade-in">Agencias de Viaje Oficiales</h1>
+                    <p class="animate-slide-up">Las mejores agencias para descubrir Jujuy con expertos locales</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FILTROS DE AGENCIAS  ================= -->
+<section class="filtros-agencias section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2>Elegí tu agencia de confianza</h2>
+            <p>Comparte tu experiencia y ayudá a otros viajeros</p>
+        </div>
+        
+        <!-- IMPORTANTE: Los inputs DEBEN estar ANTES del grid y ser hermanos -->
+        <div class="filtros-buttons">
+            <input type="radio" name="filtro-agencia" id="todas" checked>
+            <label for="todas" class="filtro-btn">Todas</label>
+            
+            <input type="radio" name="filtro-agencia" id="aventura">
+            <label for="aventura" class="filtro-btn">🏔️ Aventura</label>
+            
+            <input type="radio" name="filtro-agencia" id="cultural">
+            <label for="cultural" class="filtro-btn">🏺 Cultural</label>
+            
+            <input type="radio" name="filtro-agencia" id="luxury">
+            <label for="luxury" class="filtro-btn">👑 Lujo</label>
+        </div>
+
+        <!-- ================= GRID DE AGENCIAS ================= -->
+        <!-- El grid debe ser hermano de los inputs, no dentro de otro div -->
+        <div class="agencias-grid">
+            <!-- Agencia 1 - Aventura -->
+            <div class="agencia-card" data-categoria="aventura">
+                <div class="agencia-flip-card">
+                    <div class="agencia-flip-inner">
+                        <div class="agencia-front">
+                            <div class="agencia-logo">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <img src="assets/media/img1.jpg" alt="Andes Expediciones" loading="lazy" class="agencia-img">
+                            <h3>Andes Expediciones</h3>
+                            <div class="rating-static">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.5)</span>
+                            </div>
+                            <p class="agencia-tag">Trekking · Montaña · Aventura</p>
+                        </div>
+                        <div class="agencia-back">
+                            <h3>Andes Expediciones</h3>
+                            <p>Expertos en trekking y montaña. Guías certificados con años de experiencia.</p>
+                            <div class="agencia-contacto">
+                                <p><i class="fas fa-phone"></i> +54 388 4123456</p>
+                                <p><i class="fas fa-envelope"></i> info@andesexpediciones.com</p>
+                                <p><i class="fas fa-map-marker-alt"></i> San Salvador de Jujuy</p>
+                            </div>
+                            <a href="#" class="button small-button">Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rating-interactivo">
+                    <p>Calificá esta agencia:</p>
+                    <div class="rating-stars">
+                        <input type="radio" name="rating1" id="r1-5">
+                        <label for="r1-5" class="star">★</label>
+                        <input type="radio" name="rating1" id="r1-4">
+                        <label for="r1-4" class="star">★</label>
+                        <input type="radio" name="rating1" id="r1-3">
+                        <label for="r1-3" class="star">★</label>
+                        <input type="radio" name="rating1" id="r1-2">
+                        <label for="r1-2" class="star">★</label>
+                        <input type="radio" name="rating1" id="r1-1">
+                        <label for="r1-1" class="star">★</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 2 - Cultural -->
+            <div class="agencia-card" data-categoria="cultural">
+                <div class="agencia-flip-card">
+                    <div class="agencia-flip-inner">
+                        <div class="agencia-front">
+                            <div class="agencia-logo">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <img src="assets/media/img2.webp" alt="Raíces Jujeñas" loading="lazy" class="agencia-img">
+                            <h3>Raíces Jujeñas</h3>
+                            <div class="rating-static">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                            <p class="agencia-tag">Cultural · Pueblos originarios · Museos</p>
+                        </div>
+                        <div class="agencia-back">
+                            <h3>Raíces Jujeñas</h3>
+                            <p>Descubrí la historia y cultura de Jujuy con guías locales auténticos.</p>
+                            <div class="agencia-contacto">
+                                <p><i class="fas fa-phone"></i> +54 388 4234567</p>
+                                <p><i class="fas fa-envelope"></i> contacto@raicesjujenas.com</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Purmamarca</p>
+                            </div>
+                            <a href="#" class="button small-button">Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rating-interactivo">
+                    <p>Calificá esta agencia:</p>
+                    <div class="rating-stars">
+                        <input type="radio" name="rating2" id="r2-5">
+                        <label for="r2-5" class="star">★</label>
+                        <input type="radio" name="rating2" id="r2-4">
+                        <label for="r2-4" class="star">★</label>
+                        <input type="radio" name="rating2" id="r2-3">
+                        <label for="r2-3" class="star">★</label>
+                        <input type="radio" name="rating2" id="r2-2">
+                        <label for="r2-2" class="star">★</label>
+                        <input type="radio" name="rating2" id="r2-1">
+                        <label for="r2-1" class="star">★</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 3 - Lujo -->
+            <div class="agencia-card" data-categoria="luxury">
+                <div class="agencia-flip-card">
+                    <div class="agencia-flip-inner">
+                        <div class="agencia-front">
+                            <div class="agencia-logo">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <img src="assets/media/img3.webp" alt="Exclusive Jujuy" loading="lazy" class="agencia-img">
+                            <h3>Exclusive Jujuy</h3>
+                            <div class="rating-static">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                            <p class="agencia-tag">Lujo · Experiencias premium · Vip</p>
+                        </div>
+                        <div class="agencia-back">
+                            <h3>Exclusive Jujuy</h3>
+                            <p>Experiencias exclusivas, hospedaje de lujo y servicios personalizados.</p>
+                            <div class="agencia-contacto">
+                                <p><i class="fas fa-phone"></i> +54 388 4345678</p>
+                                <p><i class="fas fa-envelope"></i> hola@exclusivejujuy.com</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Tilcara</p>
+                            </div>
+                            <a href="#" class="button small-button">Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rating-interactivo">
+                    <p>Calificá esta agencia:</p>
+                    <div class="rating-stars">
+                        <input type="radio" name="rating3" id="r3-5">
+                        <label for="r3-5" class="star">★</label>
+                        <input type="radio" name="rating3" id="r3-4">
+                        <label for="r3-4" class="star">★</label>
+                        <input type="radio" name="rating3" id="r3-3">
+                        <label for="r3-3" class="star">★</label>
+                        <input type="radio" name="rating3" id="r3-2">
+                        <label for="r3-2" class="star">★</label>
+                        <input type="radio" name="rating3" id="r3-1">
+                        <label for="r3-1" class="star">★</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 4 - Aventura -->
+            <div class="agencia-card" data-categoria="aventura">
+                <div class="agencia-flip-card">
+                    <div class="agencia-flip-inner">
+                        <div class="agencia-front">
+                            <div class="agencia-logo">
+                                <i class="fas fa-bicycle"></i>
+                            </div>
+                            <img src="assets/media/img4.png" alt="Jujuy Bike Tours" loading="lazy" class="agencia-img">
+                            <h3>Jujuy Bike Tours</h3>
+                            <div class="rating-static">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.0)</span>
+                            </div>
+                            <p class="agencia-tag">Bicicleta · Aventura · Naturaleza</p>
+                        </div>
+                        <div class="agencia-back">
+                            <h3>Jujuy Bike Tours</h3>
+                            <p>Recorré los paisajes más impresionantes de Jujuy en bicicleta.</p>
+                            <div class="agencia-contacto">
+                                <p><i class="fas fa-phone"></i> +54 388 4456789</p>
+                                <p><i class="fas fa-envelope"></i> info@jujuybike.com</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Volcán</p>
+                            </div>
+                            <a href="#" class="button small-button">Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rating-interactivo">
+                    <p>Calificá esta agencia:</p>
+                    <div class="rating-stars">
+                        <input type="radio" name="rating4" id="r4-5">
+                        <label for="r4-5" class="star">★</label>
+                        <input type="radio" name="rating4" id="r4-4">
+                        <label for="r4-4" class="star">★</label>
+                        <input type="radio" name="rating4" id="r4-3">
+                        <label for="r4-3" class="star">★</label>
+                        <input type="radio" name="rating4" id="r4-2">
+                        <label for="r4-2" class="star">★</label>
+                        <input type="radio" name="rating4" id="r4-1">
+                        <label for="r4-1" class="star">★</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 5 - Cultural -->
+            <div class="agencia-card" data-categoria="cultural">
+                <div class="agencia-flip-card">
+                    <div class="agencia-flip-inner">
+                        <div class="agencia-front">
+                            <div class="agencia-logo">
+                                <i class="fas fa-drumstick-bite"></i>
+                            </div>
+                            <img src="assets/media/img5.webp" alt="Sabores Jujeños" loading="lazy" class="agencia-img">
+                            <h3>Sabores Jujeños</h3>
+                            <div class="rating-static">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.7)</span>
+                            </div>
+                            <p class="agencia-tag">Gastronomía · Vinos · Talleres</p>
+                        </div>
+                        <div class="agencia-back">
+                            <h3>Sabores Jujeños</h3>
+                            <p>Descubrí la gastronomía jujeña con expertos. Recorridos por bodegas y mercados.</p>
+                            <div class="agencia-contacto">
+                                <p><i class="fas fa-phone"></i> +54 388 4567890</p>
+                                <p><i class="fas fa-envelope"></i> hola@saboresjujenos.com</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Maimará</p>
+                            </div>
+                            <a href="#" class="button small-button">Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rating-interactivo">
+                    <p>Calificá esta agencia:</p>
+                    <div class="rating-stars">
+                        <input type="radio" name="rating5" id="r5-5">
+                        <label for="r5-5" class="star">★</label>
+                        <input type="radio" name="rating5" id="r5-4">
+                        <label for="r5-4" class="star">★</label>
+                        <input type="radio" name="rating5" id="r5-3">
+                        <label for="r5-3" class="star">★</label>
+                        <input type="radio" name="rating5" id="r5-2">
+                        <label for="r5-2" class="star">★</label>
+                        <input type="radio" name="rating5" id="r5-1">
+                        <label for="r5-1" class="star">★</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 6 - Luxury -->
+            <div class="agencia-card" data-categoria="luxury">
+                <div class="agencia-flip-card">
+                    <div class="agencia-flip-inner">
+                        <div class="agencia-front">
+                            <div class="agencia-logo">
+                                <i class="fas fa-helicopter"></i>
+                            </div>
+                            <img src="assets/media/img6.webp" alt="Altoandino Viajes" loading="lazy" class="agencia-img">
+                            <h3>Altoandino Viajes</h3>
+                            <div class="rating-static">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                            <p class="agencia-tag">Vip · Excursiones privadas · Confort</p>
+                        </div>
+                        <div class="agencia-back">
+                            <h3>Altoandino Viajes</h3>
+                            <p>Servicio premium con vehículos 4x4, guías bilingües y experiencias a medida.</p>
+                            <div class="agencia-contacto">
+                                <p><i class="fas fa-phone"></i> +54 388 4678901</p>
+                                <p><i class="fas fa-envelope"></i> viajes@altoandino.com</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Purmamarca</p>
+                            </div>
+                            <a href="#" class="button small-button">Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rating-interactivo">
+                    <p>Calificá esta agencia:</p>
+                    <div class="rating-stars">
+                        <input type="radio" name="rating6" id="r6-5">
+                        <label for="r6-5" class="star">★</label>
+                        <input type="radio" name="rating6" id="r6-4">
+                        <label for="r6-4" class="star">★</label>
+                        <input type="radio" name="rating6" id="r6-3">
+                        <label for="r6-3" class="star">★</label>
+                        <input type="radio" name="rating6" id="r6-2">
+                        <label for="r6-2" class="star">★</label>
+                        <input type="radio" name="rating6" id="r6-1">
+                        <label for="r6-1" class="star">★</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- ================= FOOTER (IGUAL AL INDEX) ================= -->
+    <footer class="main-footer section-padding" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recibí ofertas y guías exclusivas</p>
+                    <form id="newsletterForm" action="#" method="post">
+                        <div class="form-group">
+                            <input type="email" id="news-email" name="email" placeholder="Tu correo electrónico" required>
+                            <button type="submit" class="button primary-button">Suscribirme</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer-social">
+                    <h3>Seguinos</h3>
+                    <ul>
+                        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-map">
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-66.5%2C-24.5%2C-64.5%2C-22.5&layer=mapnik&marker=-23.5%2C-65.5" 
+                            width="100%" height="200" style="border:0" allowfullscreen loading="lazy" 
+                            title="Mapa de Jujuy"></iframe>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Turismo Jujuy - Descubrí la magia del norte argentino</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/agencias.js" defer></script>
+</body>
+</html>

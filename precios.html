@@ -1,367 +1,375 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Turismo Jujuy">
+    <meta name="language" content="spanish">
+    <meta http-equiv="content-language" content="es-AR">
+    <meta name="description" content="Compará precios de paquetes turísticos en Jujuy. Encontrá la mejor oferta para tu viaje a la Quebrada, Puna y Yungas.">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tribu de Hierro Gym - Planes y Precios</title>
+    <meta property="og:title" content="Precios y Paquetes - Turismo Jujuy">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Compará precios y elegí el paquete perfecto para tu viaje a Jujuy.">
+    <meta property="og:locale" content="es_AR">
+    <title>Turismo Jujuy · Precios y Paquetes Turísticos</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/precios.css">
-    <link rel="stylesheet" href="css/header-footer.css">
-    <link rel="icon" href="/assets/image/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- ================= HEADER (IGUAL AL INDEX) ================= -->
     <header class="header" role="banner">
         <div class="container">
             <nav class="navbar" aria-label="Navegación principal">
                 <div class="logo">
-                    <a href="index.html" aria-current="page">
-                        <div class="logo-image-container">
-                            <img src="assets/image/logo-gym.png" alt="Tribu de Hierro Gym - Logo" class="round-logo">
-                        </div>
-                        
-                        <h1>Tribu de Hierro Gym</h1>
+                    <a href="index.html">
+                        <svg class="logo-svg" width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Turismo Jujuy">
+                            <path d="M20,50 L50,20 L80,50 L50,80 Z" fill="var(--primary-color)" stroke="var(--accent-color)" stroke-width="2">
+                                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="20s" repeatCount="indefinite"/>
+                            </path>
+                            <circle cx="50" cy="50" r="15" fill="var(--light-bg)"/>
+                        </svg>
+                        <h1>Turismo Jujuy</h1>
                     </a>
                 </div>
                 
-                <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Menú principal">
+                <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú principal">
                     <span class="hamburger"></span>
                 </button>
                 
                 <ul class="nav-links" id="main-menu">
-                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    
                     <li class="mega-menu">
-                        <button class="mega-menu-button" aria-expanded="false" aria-controls="clases-menu">
-                            Clases <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                            <span class="visually-hidden">Desplegar menú</span>
+                        <button class="mega-menu-button" aria-expanded="false" aria-controls="destinos-menu">
+                            Destinos <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </button>
-                        <div class="mega-menu-content" id="clases-menu" aria-labelledby="clases-heading">
-                            <h2 id="clases-heading" class="visually-hidden">Submenú de Clases</h2>
+                        <div class="mega-menu-content" id="destinos-menu">
                             <div class="mega-menu-row">
                                 <div class="mega-menu-column">
-                                    <h3>Musculación</h3>
+                                    <h3>Quebrada</h3>
                                     <ul>
-                                        <li><a href="clases/principiantes.html" target="_blank">Principiantes</a></li>
-                                        <li><a href="clases/intermedios.html"target="_blank" >Intermedios</a></li>
-                                        <li><a href="clases/avanzados.html" target="_blank">Avanzados</a></li>
+                                        <li><a href="destinos/purmamarca.html">Purmamarca</a></li>
+                                        <li><a href="destinos/tilcara.html">Tilcara</a></li>
+                                        <li><a href="destinos/humahuaca.html">Humahuaca</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h3>Cardio</h3>
+                                    <h3>Puna</h3>
                                     <ul>
-                                        <li><a href="clases/spinning.html" target="_blank">Spinning</a></li>
-                                        <li><a href="clases/zumba.html" target="_blank">Zumba</a></li>
+                                        <li><a href="destinos/salinas.html">Salinas Grandes</a></li>
+                                        <li><a href="destinos/susques.html">Susques</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h3>Funcional</h3>
+                                    <h3>Yungas</h3>
                                     <ul>
-                                        <li><a href="clases/crossfit.html" target="_blank">CrossFit</a></li>
-                                        <li><a href="clases/functional.html" target="_blank">Functional Training</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-menu-column">
-                                    <h3>Bienestar</h3>
-                                    <ul>
-                                        <li><a href="clases/yoga.html" target="_blank">Yoga</a></li>
-                                        <li><a href="clases/pilates.html" target="_blank">Pilates</a></li>
+                                        <li><a href="destinos/calilegua.html">P.N. Calilegua</a></li>
+                                        <li><a href="destinos/termas.html">Termas de Jordán</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li><a href="entrenadores.html">Entrenadores</a></li>
-                    <li><a href="precios.html">Precios</a></li>
+                    
+                    <li><a href="agencias.html">Agencias</a></li>
+                    <li><a href="precios.html" class="active">Precios</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
                 
-                <aside class="cta-container">
-                    <a href="registro.html" class="btn-cta" target="_blank">Únete ahora a la Tribu</a>
-                </aside>
+                <button id="darkModeToggle" class="dark-mode-btn" aria-label="Cambiar modo oscuro/claro">
+                    <i class="fas fa-moon"></i>
+                </button>
             </nav>
         </div>
     </header>
-    
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="pricing-hero">
+
+    <main id="main-content">
+        <!-- ================= HERO DE PRECIOS ================= -->
+        <section class="precios-hero" aria-labelledby="precios-heading">
             <div class="container">
-                <div class="hero-content">
-                    <h1>Planes que se adaptan a tus metas</h1>
-                    <p>Elige el plan perfecto para tu viaje fitness y únete a nuestra tribu</p>
+                <div class="precios-hero-content">
+                    <h1 id="precios-heading" class="animate-fade-in">Compará precios y elegí tu aventura</h1>
+                    <p class="animate-slide-up">Paquetes diseñados para todos los presupuestos</p>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section class="pricing-section">
+        <!-- ================= TABLA DE PRECIOS COMPARATIVA ================= -->
+        <section class="tabla-precios section-padding">
             <div class="container">
-                <h2>Elige tu plan de entrenamiento</h2>
-                <p class="section-subtitle">Todos los planes incluyen acceso a nuestra comunidad y seguimiento básico</p>
+                <div class="section-header">
+                    <h2>Comparador de Destinos</h2>
+                    <p>Encontrá el paquete que mejor se adapte a vos</p>
+                </div>
+
+                <!-- Tabla responsiva (contenedor con overflow) -->
+                <div class="tabla-responsive">
+                    <table class="precios-table">
+                        <thead>
+                            <tr>
+                                <th>Destino</th>
+                                <th>Duración</th>
+                                <th>Incluye</th>
+                                <th>Precio Base</th>
+                                <th>Precio Full</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Fila 1: Purmamarca -->
+                            <tr>
+                                <td data-label="Destino">
+                                    <strong>🏔️ Purmamarca</strong>
+                                    <span class="tooltip">⭐ Destino más popular
+                                        <span class="tooltip-text">El pueblo más pintoresco de la Quebrada, con el Cerro de los 7 Colores.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Duración">2 días / 1 noche</td>
+                                <td data-label="Incluye">
+                                    Transporte + Guía
+                                    <span class="tooltip">ℹ️
+                                        <span class="tooltip-text">Traslados desde San Salvador y guía local certificado.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio Base" class="precio">$45.000</td>
+                                <td data-label="Precio Full" class="precio-full">$75.000</td>
+                                <td data-label="Acción">
+                                    <a href="#" class="btn-reservar">Reservar <i class="fas fa-arrow-right"></i></a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Fila 2: Hornocal -->
+                            <tr>
+                                <td data-label="Destino">
+                                    <strong>🏔️ Hornocal</strong>
+                                    <span class="tooltip">✨ 14 colores
+                                        <span class="tooltip-text">El cerro de 14 colores a 4.350 msnm, una experiencia única.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Duración">1 día</td>
+                                <td data-label="Incluye">
+                                    4x4 + Picnic
+                                    <span class="tooltip">ℹ️
+                                        <span class="tooltip-text">Vehiculo 4x4 con seguro, desayuno y picnic de altura.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio Base" class="precio">$35.000</td>
+                                <td data-label="Precio Full" class="precio-full">$60.000</td>
+                                <td data-label="Acción">
+                                    <a href="#" class="btn-reservar">Reservar <i class="fas fa-arrow-right"></i></a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Fila 3: Salinas Grandes -->
+                            <tr>
+                                <td data-label="Destino">
+                                    <strong>🧂 Salinas Grandes</strong>
+                                    <span class="tooltip">🌅 Imperdible
+                                        <span class="tooltip-text">El desierto de sal más grande del país, con efecto espejo en temporada de lluvias.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Duración">1 día</td>
+                                <td data-label="Incluye">
+                                    Transporte + Fotos
+                                    <span class="tooltip">ℹ️
+                                        <span class="tooltip-text">Traslado en minivan, sesión fotográfica profesional incluida.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio Base" class="precio">$40.000</td>
+                                <td data-label="Precio Full" class="precio-full">$65.000</td>
+                                <td data-label="Acción">
+                                    <a href="#" class="btn-reservar">Reservar <i class="fas fa-arrow-right"></i></a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Fila 4: Tilcara -->
+                            <tr>
+                                <td data-label="Destino">
+                                    <strong>🏛️ Tilcara</strong>
+                                    <span class="tooltip">🏺 Cultura
+                                        <span class="tooltip-text">Pucará de Tilcara, museos y la famosa Garganta del Diablo.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Duración">2 días / 1 noche</td>
+                                <td data-label="Incluye">
+                                    Entradas + Guía
+                                    <span class="tooltip">ℹ️
+                                        <span class="tooltip-text">Entradas a museos y Pucará incluidas. Guía especializado en arqueología.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio Base" class="precio">$50.000</td>
+                                <td data-label="Precio Full" class="precio-full">$80.000</td>
+                                <td data-label="Acción">
+                                    <a href="#" class="btn-reservar">Reservar <i class="fas fa-arrow-right"></i></a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Fila 5: Calilegua -->
+                            <tr>
+                                <td data-label="Destino">
+                                    <strong>🌳 P.N. Calilegua</strong>
+                                    <span class="tooltip">🦜 Selva
+                                        <span class="tooltip-text">El parque nacional más importante de las Yungas, biodiversidad única.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Duración">2 días / 1 noche</td>
+                                <td data-label="Incluye">
+                                    Trekking + Avistaje
+                                    <span class="tooltip">ℹ️
+                                        <span class="tooltip-text">Senderismo guiado, avistaje de aves y equipo básico incluido.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio Base" class="precio">$55.000</td>
+                                <td data-label="Precio Full" class="precio-full">$85.000</td>
+                                <td data-label="Acción">
+                                    <a href="#" class="btn-reservar">Reservar <i class="fas fa-arrow-right"></i></a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Fila 6: Termas de Jordán -->
+                            <tr>
+                                <td data-label="Destino">
+                                    <strong>♨️ Termas de Jordán</strong>
+                                    <span class="tooltip">💆 Relax
+                                        <span class="tooltip-text">Aguas termales rodeadas de selva, ideales para descansar.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Duración">1 día</td>
+                                <td data-label="Incluye">
+                                    Entrada + Traslado
+                                    <span class="tooltip">ℹ️
+                                        <span class="tooltip-text">Entrada a los complejos termales y traslados desde San Salvador.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio Base" class="precio">$30.000</td>
+                                <td data-label="Precio Full" class="precio-full">$50.000</td>
+                                <td data-label="Acción">
+                                    <a href="#" class="btn-reservar">Reservar <i class="fas fa-arrow-right"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Nota explicativa -->
+                <div class="nota-precios">
+                    <p><i class="fas fa-info-circle"></i> Precios por persona expresados en pesos argentinos. Consultar por promociones grupales.</p>
+                    <p><i class="fas fa-tag"></i> <strong>Precio Base:</strong> Transporte + Guía básico | <strong>Precio Full:</strong> Incluye comidas, entradas y actividades adicionales</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= COMPARACIÓN DE PAQUETES (TARJETAS) ================= -->
+        <section class="paquetes-destacados section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Paquetes Especiales</h2>
+                    <p>Las mejores ofertas para vivir Jujuy al máximo</p>
+                </div>
                 
-                <div class="toggle-container">
-                    <span>Mensual</span>
-                    <label class="switch">
-                        <input type="checkbox" id="plan-toggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <span>Anual <span class="discount-badge">(20% de descuento)</span></span>
-                </div>
-
-                <div class="pricing-table">
-                    <!-- Plan Bronce -->
-                    <div class="pricing-card">
-                        <div class="card-header">
-                            <h3>Plan Bronce</h3>
-                            <div class="price monthly">$30.000<span>/mes</span></div>
-                            <div class="price annually">$25.000<span>/mes</span></div>
-                            <p class="billed-annually">Facturado anualmente ($300.000)</p>
+                <div class="paquetes-grid">
+                    <!-- Paquete 1 -->
+                    <div class="paquete-card">
+                        <div class="paquete-badge">Más vendido</div>
+                        <div class="paquete-icon">
+                            <i class="fas fa-mountain"></i>
                         </div>
-                        <ul class="features">
-                            <li>
-                                <i class="fas fa-check"></i> Acceso a zona de pesas
-                                <span class="tooltip">Incluye máquinas de pesas y barras libres</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> Horario estándar
-                                <span class="tooltip">De 6:00 am a 10:00 pm</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> 1 clase grupal por semana
-                                <span class="tooltip">Elige entre spinning, zumba o funcional</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> Lockers básicos
-                                <span class="tooltip">Uso diario, trae tu propio candado</span>
-                            </li>
+                        <h3>Quebrada Esencial</h3>
+                        <div class="paquete-precio">$120.000</div>
+                        <p class="paquete-duracion">3 días / 2 noches</p>
+                        <ul class="paquete-incluye">
+                            <li><i class="fas fa-check"></i> Purmamarca + Tilcara + Humahuaca</li>
+                            <li><i class="fas fa-check"></i> Alojamiento con desayuno</li>
+                            <li><i class="fas fa-check"></i> Guía especializado</li>
+                            <li><i class="fas fa-check"></i> Entradas a museos</li>
                         </ul>
-                        <button class="cta-button">Únete ahora</button>
+                        <a href="#" class="button primary-button">Ver detalle</a>
                     </div>
-
-                    <!-- Plan Plata (Popular) -->
-                    <div class="pricing-card popular">
-                        <div class="popular-badge">MÁS POPULAR</div>
-                        <div class="card-header">
-                            <h3>Plan Plata</h3>
-                            <div class="price monthly">$35.000<span>/mes</span></div>
-                            <div class="price annually">$30.000<span>/mes</span></div>
-                            <p class="billed-annually">Facturado anualmente ($360.000)</p>
+                    
+                    <!-- Paquete 2 -->
+                    <div class="paquete-card featured">
+                        <div class="paquete-badge">Recomendado</div>
+                        <div class="paquete-icon">
+                            <i class="fas fa-camera"></i>
                         </div>
-                        <ul class="features">
-                            <li>
-                                <i class="fas fa-check"></i> Todo en Plan Bronce
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> Acceso ilimitado a clases grupales
-                                <span class="tooltip">Incluye todas nuestras clases: spinning, zumba, funcional, yoga</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> Horario extendido
-                                <span class="tooltip">De 5:00 am a 11:00 pm</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> 1 sesión con entrenador al mes
-                                <span class="tooltip">Evaluación y plan personalizado</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> Lockers premium
-                                <span class="tooltip">Con cerradura digital incluida</span>
-                            </li>
+                        <h3>Puna Mágica</h3>
+                        <div class="paquete-precio">$160.000</div>
+                        <p class="paquete-duracion">4 días / 3 noches</p>
+                        <ul class="paquete-incluye">
+                            <li><i class="fas fa-check"></i> Salinas + Susques + Hornocal</li>
+                            <li><i class="fas fa-check"></i> Alojamiento en altura</li>
+                            <li><i class="fas fa-check"></i> 4x4 + fotógrafo profesional</li>
+                            <li><i class="fas fa-check"></i> Comidas típicas incluidas</li>
                         </ul>
-                        <button class="cta-button">Únete ahora</button>
+                        <a href="#" class="button primary-button">Ver detalle</a>
                     </div>
-
-                    <!-- Plan Oro -->
-                    <div class="pricing-card">
-                        <div class="card-header">
-                            <h3>Plan Oro</h3>
-                            <div class="price monthly">$40.000<span>/mes</span></div>
-                            <div class="price annually">$35.000<span>/mes</span></div>
-                            <p class="billed-annually">Facturado anualmente ($420.000)</p>
+                    
+                    <!-- Paquete 3 -->
+                    <div class="paquete-card">
+                        <div class="paquete-badge">Eco aventura</div>
+                        <div class="paquete-icon">
+                            <i class="fas fa-tree"></i>
                         </div>
-                        <ul class="features">
-                            <li>
-                                <i class="fas fa-check"></i> Todo en Plan Plata
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> Acceso 24/7
-                                <span class="tooltip">Acceso en cualquier momento con tarjeta RFID</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> 4 sesiones con entrenador al mes
-                                <span class="tooltip">Seguimiento personalizado semanal</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> Área VIP
-                                <span class="tooltip">Zona exclusiva con equipos premium</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> Sauna y jacuzzi
-                                <span class="tooltip">Acceso ilimitado a zona de relajación</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i> Toalla y kit de bienvenida
-                                <span class="tooltip">Incluye toalla, botella y mochila</span>
-                            </li>
+                        <h3>Yungas Salvaje</h3>
+                        <div class="paquete-precio">$140.000</div>
+                        <p class="paquete-duracion">3 días / 2 noches</p>
+                        <ul class="paquete-incluye">
+                            <li><i class="fas fa-check"></i> Calilegua + Termas de Jordán</li>
+                            <li><i class="fas fa-check"></i> Trekking guiado</li>
+                            <li><i class="fas fa-check"></i> Avistaje de aves</li>
+                            <li><i class="fas fa-check"></i> Equipo de trekking</li>
                         </ul>
-                        <button class="cta-button">Únete ahora</button>
+                        <a href="#" class="button primary-button">Ver detalle</a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="benefits-section">
-            <div class="container">
-                <h2>Beneficios exclusivos</h2>
-                <p class="section-subtitle">Todos nuestros miembros disfrutan de estos beneficios</p>
-                
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-dumbbell"></i>
-                        </div>
-                        <h3>Equipo de primera</h3>
-                        <p>Máquinas de última generación y pesas libres de alta calidad para todos los niveles.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Comunidad activa</h3>
-                        <p>Únete a nuestra tribu y participa en eventos, desafíos y competencias amistosas.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Resultados garantizados</h3>
-                        <p>Seguimiento de progreso con tecnología de punta y asesoramiento profesional.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-heartbeat"></i>
-                        </div>
-                        <h3>Enfoque integral</h3>
-                        <p>No solo ejercicio, también nutrición, descanso y bienestar mental.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials-section">
-            <div class="container">
-                <h2>Lo que dice nuestra tribu</h2>
-                <p class="section-subtitle">Experiencias reales de nuestros miembros</p>
-                
-                <div class="testimonials-container">
-                    <div class="testimonial">
-                        <div class="testimonial-image">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos M." class="clipped-image">
-                        </div>
-                        <div class="testimonial-content">
-                            <p>"En 6 meses transformé mi cuerpo y mi salud. Los entrenadores son expertos y la comunidad es muy motivadora."</p>
-                            <h4>Carlos M.</h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="member-since">Miembro desde 2022</span>
-                        </div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial-image">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana L." class="clipped-image">
-                        </div>
-                        <div class="testimonial-content">
-                            <p>"El mejor gimnasio al que he ido. El área VIP vale cada peso y nunca está abarrotado como otros gimnasios."</p>
-                            <h4>Ana L.</h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="member-since">Miembro desde 2021</span>
-                        </div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial-image">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Roberto G." class="clipped-image">
-                        </div>
-                        <div class="testimonial-content">
-                            <p>"Me encanta la variedad de clases y el ambiente. He logrado metas que nunca creí posibles."</p>
-                            <h4>Roberto G.</h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="member-since">Miembro desde 2020</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <h2>¿Listo para unirte a la Tribu de Hierro?</h2>
-                <p>Regístrate hoy mismo y obtén una sesión de evaluación gratuita</p>
-                <a href="registro.html" class="btn-cta-large" target="_blank">Empieza tu viaje ahora</a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- ================= FOOTER (IGUAL AL INDEX) ================= -->
     <footer class="main-footer section-padding" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-newsletter">
-                    <h3>Suscríbete a nuestro newsletter</h3>
-                    <form action="#" method="post" aria-labelledby="newsletter-heading">
-                        <h4 id="newsletter-heading" class="visually-hidden">Formulario de newsletter</h4>
+                    <h3>Newsletter</h3>
+                    <p>Recibí ofertas y guías exclusivas</p>
+                    <form id="newsletterForm" action="#" method="post">
                         <div class="form-group">
-                            <label for="email" class="visually-hidden">Tu correo electrónico</label>
-                            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
-                            <button type="submit" class="button primary-button">Suscribirse</button>
+                            <input type="email" id="news-email" name="email" placeholder="Tu correo electrónico" required>
+                            <button type="submit" class="button primary-button">Suscribirme</button>
                         </div>
                     </form>
                 </div>
-                
                 <div class="footer-social">
-                    <h3>Síguenos en redes sociales</h3>
+                    <h3>Seguinos</h3>
                     <ul>
-                        <li><a href="https://facebook.com/tribudehierrogym" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="https://instagram.com/tribudehierrogym" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="https://tiktok.com/@tribudehierrogym" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
-                        <li><a href="https://twitter.com/tribudehierrogym" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.179337828276!2d-65.3015582855247!3d-24.18633888393978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942e3712dd4915b7%3A0x391d834944108836!2sPlaza%20Belgrano!5e0!3m2!1ses-419!2sar!4v1712278483297!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación de Tribu de Hierro Gym" aria-label="Mapa de ubicación"></iframe>
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-66.5%2C-24.5%2C-64.5%2C-22.5&layer=mapnik&marker=-23.5%2C-65.5" 
+                            width="100%" height="200" style="border:0" allowfullscreen loading="lazy" 
+                            title="Mapa de Jujuy"></iframe>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p>&copy; 2025 Tribu de Hierro Gym. Todos los derechos reservados.</p>
-                </div>
+                <p>&copy; 2026 Turismo Jujuy - Descubrí la magia del norte argentino</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/precio.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
