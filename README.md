@@ -158,13 +158,13 @@ Los alumnos deben entregar:
 1. Código HTML y CSS bien estructurado.
 2. Documentación técnica explicando decisiones de diseño y código.
 3. **Demo publicada** en GitHub Pages o Netlify.
+Puedes explorar el sitio completo aquí:
+
+👉 [**visitajujuy.netlify.app**](https://visitajujuy.netlify.app)
+
 4. **Video de presentación** con las funcionalidades implementadas.
 
 ---
-
-## Páginas de referencia
-
-- [https://www.gymtop.com.ar/](https://www.gymtop.com.ar/)
 
 ## Autor
 Abel Nestor Peñaloza - Estudiante de PySW 2026
