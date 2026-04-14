@@ -163,6 +163,7 @@ Puedes explorar el sitio completo aquí:
 👉 [**visitajujuy.netlify.app**](https://visitajujuy.netlify.app)
 
 4. **Video de presentación** con las funcionalidades implementadas.
+    [Ver video](https://youtu.be/JM9LtdHVY0A)
 
 ---
 
