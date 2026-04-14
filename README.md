@@ -6,7 +6,7 @@
 
 Este es un sitio web que hice para promocionar el turismo en la provincia de **Jujuy**. Muestra los destinos más lindos, agencias de viaje, precios, un blog con consejos y un formulario de contacto.
 
-**Puedes verlo funcionando acá:** [https://turismojujuy.netlify.app](https://turismojujuy.netlify.app)
+**Puedes verlo funcionando acá:** [https://visitajujuy.netlify.app/](https://visitajujuy.netlify.app/)
 
 ---
 
